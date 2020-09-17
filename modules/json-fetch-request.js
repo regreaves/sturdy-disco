@@ -4,7 +4,7 @@ class JSONFetchRequest {
   }
 
   fetchJSONFile() {
-    fetch(this.resource)
+    fetch(resource)
       .then(res => res.json())
       .then(json => console.log(json))
       .catch(err => console.error('Error:', err));
