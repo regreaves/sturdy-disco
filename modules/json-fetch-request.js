@@ -1,10 +1,10 @@
 class JSONFetchRequest {
-  constructor() {
-    //this.resource = resource;
+  constructor(resource) {
+    this.resource = resource;
   }
 
-  fetchJSONFile(resource) {
-    fetch(resource)
+  fetchJSONFile() {
+    fetch(this.resource)
       .then(res => res.json())
       .then(json => console.log(json))
       .catch(err => console.error('Error:', err));
